@@ -5,5 +5,5 @@ def home(request):
     numbers = [1, 2, 3, 4, 5]
     name = "Gabi"
 
-    args = {'myName': name}
+    args = {'myName': name, "numbers": numbers}
     return render(request, 'accounts/login.html', args)
