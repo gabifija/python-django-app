@@ -1,6 +1,8 @@
-from django.urls import path, include
+from django.conf.urls import url, include
 from . import views
+from django.contrib.auth.views import login
 
 urlpatterns = [
-    path('', views.home),
+    url(r'^$', views.home),
+    url(r'^login/$', login, {'template_name': 'accounts/login.html'}),
 ]
